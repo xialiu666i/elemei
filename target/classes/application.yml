@@ -1,0 +1,39 @@
+server:
+  port: 808
+spring:
+  application:
+    name: elemei
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://xialiu.online:3306/elemei?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+      username: root
+      password: wasd123
+  redis:
+    port: 6379
+    host: 8.217.220.179
+    password: wasd123
+  cache:
+    redis:
+      time-to-live: 1800000
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+  configuration:
+    #在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: ASSIGN_ID
+images:
+  path: /Users/xialiu/IdeaProjects/reggiet_take_out/src/main/resources/images/
+#images:
+#  path: /root/images/
+#images:
+#  path: E:\BaiduNetdiskDownload\瑞吉外卖\1 瑞吉外卖项目\资料\图片资源\
+logging:
+  level:
+    com.xialiu.elemei.mapper: DEBUG
+
+
